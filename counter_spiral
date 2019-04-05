@@ -1,0 +1,53 @@
+#program for print counter spril 
+def printspiral(a,n):
+    hl=0
+    hu=n-1
+    bl=0
+    bu=n-1
+    count=0
+    while(count< n*n):
+        # print downwords
+        i,j=hl,bl
+        while(i<=hu):
+            print(a[i][j])
+            i=i+1
+            count=count+1
+        else:
+            bl=bl+1
+        #print left to right
+
+        i,j = hu,bl
+        while j<=bu :
+            print(a[i][j])
+            j=j+1
+            count=count+1
+
+        else:
+            hu=hu-1
+
+        #print up wards
+        i,j=hu,bu
+        while i>=hl :
+            print(a[i][j])
+            i=i-1
+            count=count+1
+        else:
+            bu=bu-1
+
+        #print right to left
+        i,j=hl,bu
+        while j>=bl:
+            print(a[i][j])
+            j=j-1
+            count=count+1
+        else:
+            hl=hl+1
+                   
+
+a=[[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+n=4
+for i in a:
+    print(i)
+print("Counter Spril")   
+printspiral(a,n)
+    
